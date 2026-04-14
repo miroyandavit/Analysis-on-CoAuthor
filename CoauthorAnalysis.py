@@ -178,7 +178,6 @@ def suggestion_window_engagement(sessions):
             decreasing_sessions += 1
 
     result = stats.binomtest(decreasing_sessions, valid_sessions, p=0.5, alternative="greater")
-
     print(f"Total sessions: {valid_sessions}")
     print(f"Decreasing window engagement: {decreasing_sessions} ({100 * decreasing_sessions / valid_sessions:.1f}%)")
     print(f"p-value: {result.pvalue:.4f}")
